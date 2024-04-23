@@ -1,15 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import 'bootstrap/dist/css/bootstrap.css'
+import Login from './Login'
+import Dashboard from './Dashboard'
+
+const code = new URLSearchParams(window.location.search).get('code')
 
 function App() {
-
-
   return (
-    <>
-     
-    </>
+    code ? <Dashboard code ={code}/> : <Login/>
   )
 }
 
